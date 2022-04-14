@@ -228,7 +228,7 @@ i {
   }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 420px) {
   .container1 {
     padding: 0;
     grid-template-columns: repeat(2, 1fr);
@@ -252,7 +252,7 @@ i {
   }
 
   .container3 {
-    padding: 0;
+    padding: .25em;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
     "sectionContactMe sectionContactMe"
