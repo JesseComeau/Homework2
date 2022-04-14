@@ -14,38 +14,45 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light navText">
-        <div class="container-fluid navColor navText">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid navColor">
             <a class="navbar-brand navText" href="#">Jesse Comeau</a>
             <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon navText"></span>
             </button>
-            <div class="collapse navbar-collapse navText" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 navText">
-                    <li class="nav-item navText">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
                         <a class="nav-link active navText" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About Me</a>
+                        <a class="nav-link navText" href="#aboutMe">About Me</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle navText" href="#Projects" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Projects
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Bootcamp Projects</a></li>
+                            <li><a class="dropdown-item" href="#Projects">Bootcamp Projects</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li><a class="dropdown-item ms-4" href="#">Phase 1</a></li>
                             <li><a class="dropdown-item ms-4" href="#">Phase 2</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#Projects">Personal Projects</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link navText" href="#">Contact</a>
                     </li>
 
                 </ul>
@@ -64,28 +71,294 @@
         </div>
     </nav>
 
-    <main class="container2">
-        <section class="sectionAboutMe h2">About Me</section>
-        <section class="item1 aboutMe">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vitae metus ac
-            tellus tincidunt convallis vel nec lacus. Nunc sollicitudin malesuada semper. Fusce rutrum feugiat lorem, in
-            vulputate lorem pulvinar in. Curabitur non mi eleifend, vestibulum quam ut, blandit nibh. Curabitur eu
-            iaculis arcu, nec auctor nulla. Phasellus fermentum, nulla non blandit sollicitudin, nisl sapien euismod
-            magna, id molestie quam lacus non augue. Nulla quis odio leo. Vestibulum at nunc id dui accumsan tincidunt.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam bibendum eget arcu vitae lacinia. Cras
-            porttitor scelerisque posuere. In id ultricies diam. Cras consectetur tempor tellus, sed efficitur quam
-            porta sit amet. Mauris ut augue vehicula, tristique justo in, laoreet enim. Pellentesque habitant morbi
-            tristique senectus et netus et malesuada fames ac turpis egestas.</section>
-        <section class="item2 projects">
-            Nunc at auctor dui. Fusce ornare ex sed nisi placerat, venenatis consectetur felis feugiat. Nunc blandit
-            suscipit tempus. Donec bibendum ac justo iaculis faucibus. Vestibulum blandit lectus in purus imperdiet
-            elementum. Duis sed consequat nibh, non ornare mauris. Nunc interdum posuere velit. Vivamus libero ante,
-            sodales in massa at, congue pellentesque neque. Vestibulum sollicitudin porta orci vel iaculis.
+    <main class="container1">
+        <header class="sectionAboutMe h2" name="aboutMe">
+
+            About Me</header>
+
+        <img src="./assets/Me.jpg" class="rounded-circle Personal Image aboutMeIMG mx-auto aboutmepic">
+
+        <div class="aboutMeOverview mx-auto">
+            <p class=>Full Stack Web Development</p>
+
+        </div>
+        <section class="item aboutMe">
+            <a name="aboutMe"></a>
+            <div>
+                <p>Hi, I'm Jesse Comeau.</p>
+                <p>I am currently a student in the Northwestern University Full Stack Web Development
+                    Bootcamp. I have a Bachlors degrees in Finance and Economics, along with a certificate in
+                    international business from the University of Wisconsin-Milwaukee</p>
+
+                <p>I previously worked as a fraud supervisor at FIS, leading a team of 6 direct reports, while assisting
+                    with an offshore team comprising of more than 30 individuals in monitoring our hundreds of client's
+                    EPP transaction for potentially fraudulent activity. While working closely with our devops,service
+                    delivery, product managers, and development teams, I recognized a passion for development and needed
+                    to explore a new opportunity.</p>
+            </div>
+        </section>
+
+        <section class="aboutInterests">
+            <ul type="none">
+                <li class="h5">Interests:</li>
+                <ul type="square">
+                    <li>Front End Development</li>
+                    <li>Back End Development</li>
+                    <li>Tacos</li>
+                    <li>Dogs</li>
+                    <li>Homies</li>
+                </ul>
+            </ul>
+        </section>
+        <section class="aboutEducation">
+            <ul type="none">
+                <li class="h5">Education:</li>
+                <li> <i class="fa-solid fa-building-columns text-dark"></i>University of Wisconsin - Milwaukee</li>
+                <ul type="none">
+                    <li> <i class="fa-solid fa-graduation-cap text-dark fa-sm"></i>Lubar School of Business - Finance
+                    </li>
+                    <li> <i class="fa-solid fa-graduation-cap text-dark fa-sm"></i>College of Letters & Science -
+                        Economics</li>
+                </ul>
+                <li> <i class="fa-solid fa-building-columns text-dark"></i>Northwestern University</li>
+                <ul type="none">
+                    <li> <i class="fa-solid fa-graduation-cap text-dark fa-sm"></i>Full Stack Web Development
+                        Certificate (Current)</li>
+                </ul>
+            </ul>
         </section>
     </main>
+
+    <section class="container2">
+
+        <div class="sectionProjects h2">Projects</div>
+        <div class="phase h2 pt-5 mx-auto">
+            <a name="Projects">
+            </a>Phase 1
+        </div>
+            <section class="item project1 align-self-center h-100">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="./assets/TacoBoutHoppiness.jpg" alt="Card image cap">
+                    <div class="card-body h-50">
+                        <h5 class="card-title">Project 1</h5>
+                        <h6>Taco Bout Hoppiness</h6>
+                        <p class="card-text">Group Project. The team used three different APIs(Open Weather, Open
+                            brewey
+                            DB,
+                            and Documenu) to convert the user's Zipcode to Latitude/Longitude coordinates, then
+                            retreive
+                            nearby breweries and Mexican restaurants. Each of the returned results displays the
+                            business
+                            name, address, website(if available) in addition to brewery categories and restaurant
+                            menus.
+                        </p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="d-flex justify-content-around my-3">
+                                <i class="text-danger fa-xl fa-brands fa-html5"></i>
+                                <i class="text-primary fa-brands fa-css3-alt fa-xl"></i>
+                                <i class="fa-brands fa-js fa-xl text-success"></i>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="card-body h-50">
+                        <a href="https://github.com/JesseComeau/Taco-bout-Hoppiness" class="card-link">Repo</a>
+                        <a href="https://jessecomeau.github.io/Taco-bout-Hoppiness/" class="card-link">Deployed
+                            link</a>
+                    </div>
+                </div>
+            </section>
+
+            <article class="homework1">
+                <div class="card h-100" style="width: 18rem;">
+                    <img class="card-img-top" src="./assets/Refactor.jpg" alt="Card image cap">
+                    <div class="card-body h-50">
+                        <h5 class="card-title">Homework 1</h5>
+                        <h6>Refactor</h6>
+                        <p class="card-text">Refactored code for an existing site fixing issues with alignment and
+                            added
+                            alt
+                            attributes.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="d-flex justify-content-around my-3">
+                                <i class="text-danger fa-xl fa-brands fa-html5"></i>
+                                <i class="text-primary fa-brands fa-css3-alt fa-xl"></i>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="card-body h-50">
+                        <a href="https://github.com/JesseComeau/Refactor" class="card-link">Repo</a>
+                        <a href="https://jessecomeau.github.io/Refactor/" class="card-link">Deployed link</a>
+                    </div>
+                </div>
+            </article>
+            <article class="homework2">
+                <div class="card h-100" style="width: 18rem;">
+                    <img class="card-img-top" src="./assets/Password Generator.jpg" alt="Card image cap">
+                    <div class="card-body h-50">
+                        <h5 class="card-title">Homework 2</h5>
+                        <h6>Personal Portfolio</h6>
+                        <p class="card-text">Creating this website as a personal portfolio of work.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="d-flex justify-content-around my-3">
+                                <i class="text-danger fa-xl fa-brands fa-html5"></i>
+                                <i class="text-primary fa-brands fa-css3-alt fa-xl"></i>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="card-body h-50">
+                        <a href="https://github.com/JesseComeau/Portfolio" class="card-link">Repo</a>
+                        <a href="https://jessecomeau.github.io/Portfolio/" class="card-link">Deployed link</a>
+                    </div>
+                </div>
+            </article>
+            <article class="homework3">
+                <div class="card h-100" style="width: 18rem;">
+                    <img class="card-img-top" src="./assets/Password Generator.jpg" alt="Card image cap">
+                    <div class="card-body h-50">
+                        <h5 class="card-title">Homework 3</h5>
+                        <h6>Password Generator</h6>
+                        <p class="card-text">Utilized base code to create an application to generate passwords based
+                            on
+                            multiple prompts requesting input via alerts.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="d-flex justify-content-around my-3">
+                                <i class="text-danger fa-xl fa-brands fa-html5"></i>
+                                <i class="text-primary fa-brands fa-css3-alt fa-xl"></i>
+                                <i class="fa-brands fa-js fa-xl text-success"></i>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="card-body h-50">
+                        <a href="https://github.com/JesseComeau/PasswordGenerator" class="card-link">Repo</a>
+                        <a href="https://jessecomeau.github.io/PasswordGenerator/" class="card-link">Deployed
+                            link</a>
+                    </div>
+                </div>
+            </article>
+            <article class="homework4">
+                <div class="card h-100" style="width: 18rem;">
+                    <img class="card-img-top" src="./assets/JSQuiz.jpg" alt="Card image cap">
+                    <div class="card-body h-50">
+                        <h5 class="card-title">Homework 4</h5>
+                        <h6>JavaScript Quiz</h6>
+                        <p class="card-text">Created a JavaScript Quiz utilizing a timer and countdown
+                            functionality.
+                            Saved scores and initials to lcoal storage to callback scores.
+                            Utilized an array of objects to store question data.
+                            Utilized bootstrap for CSS implementation with no custom CSS.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="d-flex justify-content-around my-3">
+                                <i class="text-danger fa-xl fa-brands fa-html5"></i>
+                                <i class="text-primary fa-brands fa-css3-alt fa-xl"></i>
+                                <i class="fa-brands fa-js fa-xl text-success"></i>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="card-body h-50">
+                        <a href="https://github.com/JesseComeau/JSQuiz" class="card-link">Repo</a>
+                        <a href="https://jessecomeau.github.io/JSQuiz/" class="card-link">Deployed link</a>
+                    </div>
+                </div>
+            </article>
+            <article class="homework5">
+                <div class="card h-100" style="width: 18rem;">
+                    <img class="card-img-top" src="./assets/WordaySchedule.jpg" alt="Card image cap">
+                    <div class="card-body h-50">
+                        <h5 class="card-title">Homework 5</h5>
+                        <h6>Workday Schedule</h6>
+                        <p class="card-text">Created an application utilizing Moment.JS to create a workday
+                            scheduler
+                            that
+                            saves to local storage and prompts the data on refresh.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="d-flex justify-content-around my-3">
+                                <i class="text-danger fa-xl fa-brands fa-html5"></i>
+                                <i class="text-primary fa-brands fa-css3-alt fa-xl"></i>
+                                <i class="fa-brands fa-js fa-xl text-success"></i>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="card-body h-50">
+                        <a href="https://github.com/JesseComeau/Workschedule" class="card-link">Repo</a>
+                        <a href="https://jessecomeau.github.io/Workschedule/" class="card-link">Deployed link</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="homework6">
+                <div class="card h-100" style="width: 18rem;">
+                    <img class="card-img-top" src="./assets/Refactor.jpg" alt="Card image cap">
+                    <div class="card-body h-50">
+                        <h5 class="card-title">Homework 6</h5>
+                        <h6>Weather App</h6>
+                        <p class="card-text">Created an application that displays a forecast of the weather using
+                            the
+                            OpenWeather API.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="d-flex justify-content-around my-3">
+                                <i class="text-danger fa-xl fa-brands fa-html5"></i>
+                                <i class="text-primary fa-brands fa-css3-alt fa-xl"></i>
+                                <i class="fa-brands fa-js fa-xl text-success"></i>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="card-body h-50">
+                        <a href="https://github.com/JesseComeau/Refactor" class="card-link">Repo</a>
+                        <a href="https://jessecomeau.github.io/Refactor/" class="card-link">Deployed link</a>
+                    </div>
+                </div>
+            </article>
+    </section>
+
+    <div class="container3">
+
+        <h2 class="h1-responsive font-weight-bold text-center my-4 contactMeSection">Contact me</h2>
+        <div class="contactMeName">
+            <input type="text" id="name" name="name" class="form-control">
+            <label for="name" class="">Your name</label>
+        </div>
+        
+        <div class="contactMeEmail">
+            <input type="text" id="email" name="email" class="form-control">
+            <label for="email" class="">Your email</label>
+        </div>
+        
+        <div class="contactMeSubject">
+            <input type="text" id="subject" name="subject" class="form-control">
+            <label for="subject" class="">Subject</label>
+        </div>
+        
+        
+        <div class="contactMeMessage">
+            <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+            <label for="message">Your message</label>
+        </div>
+        
+        
+        <div class="text-center text-md-left contactMeSubmit">
+            <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+        </div>
+        
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/3468ae9667.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

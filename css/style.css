@@ -1,48 +1,267 @@
+.container1 {
+  width: 95%;
+  color: rgb(17, 42, 70) !important;
+  margin: 1% auto 1% auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1em;
+  padding: 1em;
+  grid-template-areas:
+    "sectionAboutMe aboutMeIMG aboutMe aboutMe aboutMe aboutMe"
+    "sectionAboutMe aboutMeOverview aboutInterests aboutInterests aboutEducation aboutEducation";
+  grid-row-gap: 4em;
+}
+
 .container2 {
-    width: 95%;
-    margin: 1% auto 1% auto;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto;
-    grid-gap: 1em;
-    background-color:rgb(27, 42, 65);
-    padding: 1em;
-    grid-template-areas: 
-    "sectionAboutMe aboutMe aboutMe aboutMe aboutMe"
-    "projects projects projects projects projects";
+  width: 100%;
+  color: rgb(17, 42, 70) !important;
+  margin: 1% auto 1% auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1em;
+  background-color: rgb(172, 223, 229);
+  padding: 1em;
+  grid-template-areas:
+    "sectionProjects Phase Phase Phase Phase"
+    "sectionProjects project1 homework1 homework2 homework3"
+    "sectionProjects project1 homework4 homework5 homework6";
+  grid-row-gap: 4em;
+  justify-items: center;
+}
+
+.container3 {
+  width: 100%;
+  color: rgb(17, 42, 70) !important;
+  margin: 1% auto 1% auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1em;
+  padding: 1em;
+  grid-template-areas:
+    "sectionContactMe contactMeName contactMeName contactMeEmail contactMeEmail contactMeSubmit"
+    "sectionContactMe contactMeSubject contactMeSubject contactMeSubject contactMeSubject contactMeSubmit"
+    "sectionContactMe contactMeMessage contactMeMessage contactMeMessage contactMeMessage contactMeSubmit"
+    "sectionContactMe contactMeMessage contactMeMessage contactMeMessage contactMeMessage contactMeSubmit"
+    /* "sectionContactMe contactMeMessage contactMeMessage contactMeMessage contactMeMessage contactMeMessage"
+    "sectionContactMe contactMeMessage contactMeMessage contactMeMessage contactMeMessage contactMeMessage" */;
+  /* grid-row-gap: 4e; */
+  align-items: center;
+}
+
+img {
+  float: left;
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+  border-bottom: 1px solid;
 }
 
 .navColor {
-    background-color:rgb(27, 42, 65);
+  background-color: rgb(27, 42, 65);
+  color: rgb(245, 254, 255) !important;
 }
 
 .navText {
-    color: rgb(245, 254, 255) !important;
-
+  color: rgb(245, 254, 255) !important;
 }
 
-.item1{
-    margin: 1% auto;
-    padding: 2% 2%;
-    background-color: rgb(255, 255, 255);
-}
-
-.item2{
-    margin: 1% auto;
-    background-color: antiquewhite;
-    width: 100%;
+.item1 {
+  margin: 1% auto;
+  padding: 2% 2%;
+  color: rgb(17, 42, 70);
 }
 
 .aboutMe {
-    grid-area: aboutMe;
-
+  grid-area: aboutMe;
 }
-.projects {
-    grid-area: projects;
+
+.aboutmepic {
+  grid-area: aboutMeIMG;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  align-self: center;
+}
+
+.aboutMeOverview {
+  grid-area: aboutMeOverview;
+}
+.aboutInterests {
+  grid-area: aboutInterests;
+}
+.aboutEducation {
+  grid-area: aboutEducation;
+}
+
+.project1 {
+  grid-area: project1;
+}
+
+.homework1 {
+  grid-area: homework1;
+}
+
+.homework2 {
+  grid-area: homework2;
+}
+.homework3 {
+  grid-area: homework3;
+}
+.homework4 {
+  grid-area: homework4;
+}
+.homework5 {
+  grid-area: homework5;
+}
+.homework6 {
+  grid-area: homework6;
 }
 
 .sectionAboutMe {
-    grid-area: sectionAboutMe;
-    place-self: center;
+  grid-area: sectionAboutMe;
+  place-self: center;
+}
 
+.sectionProjects {
+  grid-area: sectionProjects;
+  place-self: center;
+}
+
+i {
+  color: rgb(245, 254, 255) !important;
+}
+
+.navbar-toggler-icon {
+  color: rgb(245, 254, 255) !important;
+}
+
+.phase {
+  grid-area: Phase;
+}
+
+.container2 img:hover {
+  transition: transform 1s;
+  transform: scale(1.25);
+}
+
+.contactMeSection {
+  grid-area: sectionContactMe;
+  place-self: center;
+  justify-self: center;
+}
+
+.contactMeEmail {
+  grid-area: contactMeEmail;
+}
+
+.contactMeName {
+  grid-area: contactMeName;
+}
+
+.contactMeSubmit {
+  grid-area: contactMeSubmit;
+}
+
+.contactMeSubject {
+  grid-area: contactMeSubject;
+}
+
+.contactMeMessage {
+  grid-area: contactMeMessage;
+  align-self: stretch;
+}
+
+@media screen and (max-width: 1360px) {
+    .container2 {
+        overflow-x: auto;
+        padding: 0;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+        "sectionProjects Phase Phase Phase"
+        "sectionProjects project1 homework1 homework2"
+        "sectionProjects project1 homework3 homework4"
+        "sectionProjects project1 homework5 homework6";
+      }
+    }
+@media screen and (max-width: 680px) {
+  .container1 {
+    padding: 0;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "sectionAboutMe sectionAboutMe aboutMeIMG aboutMeOverview"
+      "sectionAboutMe sectionAboutMe aboutMeIMG aboutMeOverview"
+      "aboutMe aboutMe aboutMe aboutMe"
+      "aboutEducation aboutEducation aboutInterests aboutInterests"
+      /* "aboutEducation aboutEducation aboutEducation" */;
+    grid-row-gap: 1em;
+  }
+
+  .container2 {
+    padding: 0;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "sectionProjects sectionProjects"
+      "Phase Phase"
+      "project1 project1"
+      "homework1 homework2"
+      "homework3 homework4"
+      "homework5 homework6";
+  }
+
+  .aboutInterests ul {
+    padding: 1em 0;
+    justify-self: start;
+  }
+
+  .aboutEducation ul {
+    padding: 1em 0;
+    justify-self: end;
+  }
+
+  .aboutmepic {
+    width: 125px;
+    height: 125px;
+  }
+
+  .aboutMeOverview {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .container1 {
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "sectionAboutMe sectionAboutMe"
+      "aboutMeIMG aboutMeOverview"
+      "aboutMe aboutMe"
+      "aboutEducation aboutEducation"
+      "aboutInterests aboutInterests"
+      /* "aboutEducation aboutEducation aboutEducation" */;
+    grid-row-gap: 1em;
+  }
+  .aboutInterests ul {
+    padding: 0.25em 0;
+    justify-self: start;
+  }
+
+  .aboutEducation ul {
+    padding: 0.25em 0;
+    justify-self: end;
+  }
+
+  .container3 {
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    "sectionContactMe sectionContactMe"
+    "contactMeName contactMeEmail"
+    "contactMeSubject contactMeSubject"
+    "contactMeMessage contactMeMessage"
+    "contactMeSubmit contactMeSubmit"
+      /* "aboutEducation aboutEducation aboutEducation" */;
+    grid-row-gap: 1em;
+
+  }
 }
