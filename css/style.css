@@ -26,7 +26,7 @@
     "sectionProjects project1 homework1 homework2 homework3"
     "sectionProjects project1 homework4 homework5 homework6";
   grid-row-gap: 4em;
-  justify-items: center;
+  justify-items: start;
 }
 
 .container3 {
@@ -41,20 +41,25 @@
     "sectionContactMe contactMeName contactMeName contactMeEmail contactMeEmail contactMeSubmit"
     "sectionContactMe contactMeSubject contactMeSubject contactMeSubject contactMeSubject contactMeSubmit"
     "sectionContactMe contactMeMessage contactMeMessage contactMeMessage contactMeMessage contactMeSubmit"
-    "sectionContactMe contactMeMessage contactMeMessage contactMeMessage contactMeMessage contactMeSubmit"
-    /* "sectionContactMe contactMeMessage contactMeMessage contactMeMessage contactMeMessage contactMeMessage"
-    "sectionContactMe contactMeMessage contactMeMessage contactMeMessage contactMeMessage contactMeMessage" */;
-  /* grid-row-gap: 4e; */
+    "sectionContactMe contactMeMessage contactMeMessage contactMeMessage contactMeMessage contactMeSubmit";
   align-items: center;
 }
 
 img {
   float: left;
-  width: 200px;
-  height: 140px;
+  width: 100%;
+  min-height: 30%;
   object-fit: cover;
   border-bottom: 1px solid;
 }
+
+.card ul{
+  height: 12%;
+}
+
+/* .container2 .card-body{
+  max-height: 12% !important;  
+} */
 
 .navColor {
   background-color: rgb(27, 42, 65);
@@ -172,17 +177,51 @@ i {
 }
 
 @media screen and (max-width: 1360px) {
-    .container2 {
-        overflow-x: auto;
-        padding: 0;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-areas:
-        "sectionProjects Phase Phase Phase"
-        "sectionProjects project1 homework1 homework2"
-        "sectionProjects project1 homework3 homework4"
-        "sectionProjects project1 homework5 homework6";
-      }
-    }
+  .container2 {
+    overflow-x: auto;
+    padding: 0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "sectionProjects sectionProjects sectionProjects"
+      "Phase Phase Phase"
+      "project1 homework1 homework2"
+      "project1 homework3 homework4"
+      "project1 homework5 homework6";
+    grid-row-gap: 1em;
+    padding-bottom: 1em;
+  }
+  .phase {
+    padding-top: 0em !important;
+  }
+  .sectionProjects {
+    padding-top: 0.5em !important;
+  }
+  .project1 .card {
+    align-self: stretch;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .container2 {
+    padding: 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "sectionProjects sectionProjects"
+      "Phase Phase"
+      "project1 project1"
+      "homework1 homework2"
+      "homework3 homework4"
+      "homework5 homework6";
+    padding-bottom: 1em;
+  }
+
+  .project1 img {
+    width: 100%;
+    height: 280px;
+
+  }
+}
+
 @media screen and (max-width: 680px) {
   .container1 {
     padding: 0;
@@ -196,18 +235,6 @@ i {
     grid-row-gap: 1em;
   }
 
-  .container2 {
-    padding: 0;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas:
-      "sectionProjects sectionProjects"
-      "Phase Phase"
-      "project1 project1"
-      "homework1 homework2"
-      "homework3 homework4"
-      "homework5 homework6";
-  }
-
   .aboutInterests ul {
     padding: 1em 0;
     justify-self: start;
@@ -216,6 +243,7 @@ i {
   .aboutEducation ul {
     padding: 1em 0;
     justify-self: end;
+    padding-right: 1em;
   }
 
   .aboutmepic {
@@ -225,6 +253,15 @@ i {
 
   .aboutMeOverview {
     align-self: center;
+  }
+  .project1 .card {
+    width: 95% !important;
+    margin: 0 auto;
+  }
+
+  .container2 .card {
+    width: 100% !important;
+    margin: 0 auto;
   }
 }
 
@@ -252,16 +289,15 @@ i {
   }
 
   .container3 {
-    padding: .25em;
+    padding: 0.25em;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
-    "sectionContactMe sectionContactMe"
-    "contactMeName contactMeEmail"
-    "contactMeSubject contactMeSubject"
-    "contactMeMessage contactMeMessage"
-    "contactMeSubmit contactMeSubmit"
+      "sectionContactMe sectionContactMe"
+      "contactMeName contactMeEmail"
+      "contactMeSubject contactMeSubject"
+      "contactMeMessage contactMeMessage"
+      "contactMeSubmit contactMeSubmit"
       /* "aboutEducation aboutEducation aboutEducation" */;
     grid-row-gap: 1em;
-
   }
 }
