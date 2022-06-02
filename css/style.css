@@ -22,9 +22,9 @@
   background-color: rgb(172, 223, 229);
   padding: 1em;
   grid-template-areas:
-    "sectionProjects Phase Phase Phase Phase"
-    "sectionProjects project1 homework1 homework2 homework3"
-    "sectionProjects project1 homework4 homework5 homework6";
+    "sectionProjects Phase1 Phase1 Phase2 Phase2"
+    "sectionProjects project1 homework1 project2 homework3"
+    "sectionProjects project1 homework2 project2 homework4";
   grid-row-gap: 4em;
   justify-items: start;
 }
@@ -38,11 +38,30 @@
   grid-gap: 1em;
   padding: 1em;
   grid-template-areas:
+    "sectionResume resume resume resume resume resume";
+  align-items: center;
+  justify-items: start;
+}
+
+.container4 {
+  width: 100%;
+  color: rgb(17, 42, 70) !important;
+  background-color: rgb(172, 223, 229);
+  margin: 1% auto 1% auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1em;
+  padding: 1em;
+  grid-template-areas:
     "sectionContactMe contactMeName contactMeName contactMeEmail contactMeEmail contactMeSubmit"
     "sectionContactMe contactMeSubject contactMeSubject contactMeSubject contactMeSubject contactMeSubmit"
     "sectionContactMe contactMeMessage contactMeMessage contactMeMessage contactMeMessage contactMeSubmit"
     "sectionContactMe contactMeMessage contactMeMessage contactMeMessage contactMeMessage contactMeSubmit";
   align-items: center;
+}
+
+.container3 .resumeNav {
+  justify-self: flex-start !important;
 }
 
 img {
@@ -98,6 +117,10 @@ img {
   grid-area: project1;
 }
 
+.project2 {
+  grid-area: project2;
+}
+
 .homework1 {
   grid-area: homework1;
 }
@@ -114,8 +137,30 @@ img {
 .homework5 {
   grid-area: homework5;
 }
+
 .homework6 {
   grid-area: homework6;
+
+}
+
+.sectionResume {
+  grid-area: sectionResume;
+  place-self: center !important;
+}
+
+.resumeName {
+  justify-self: center !important;
+}
+
+.resumeNav {
+  grid-area: resumeNav;
+}
+
+.resume {
+  grid-area: resume;
+  height: 65vh;
+  width: 70vw;
+  justify-self: center !important;
 }
 
 .sectionAboutMe {
@@ -136,9 +181,15 @@ i {
   color: rgb(245, 254, 255) !important;
 }
 
-.phase {
-  grid-area: Phase;
+.phase1 {
+  grid-area: Phase1;
 }
+
+.phase2 {
+  grid-area: Phase2;
+}
+
+
 
 .container2 img:hover {
   transition: transform 1s;
@@ -180,13 +231,14 @@ i {
   .container2 {
     overflow-x: auto;
     padding: 0;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
-      "sectionProjects sectionProjects sectionProjects"
-      "Phase Phase Phase"
-      "project1 homework1 homework2"
-      "project1 homework3 homework4"
-      "project1 homework5 homework6";
+      "sectionProjects sectionProjects sectionProjects sectionProjects"
+      "Phase1 Phase1 Phase2 Phase2"
+      "project1 project1 project2 project2"
+      "project1 project1 project2 project2"
+      "homework1 homework2 homework3 homework4"
+      "homework1 homework2 homework3 homework4";
     grid-row-gap: 1em;
     padding-bottom: 1em;
     justify-items: center;
@@ -199,27 +251,44 @@ i {
   }
   .project1 .card {
     align-self: stretch;
+    width: 36rem !important;
+  }
+  .project2 .card {
+    align-self: stretch;
+    width: 36rem !important;
+  }
+  .project1 img {
+    max-height: 180px
+  }
+  .project2 img {
+    max-height: 180px
   }
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1200px) {
   .container2 {
     padding: 0;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
       "sectionProjects sectionProjects"
-      "Phase Phase"
+      "Phase1 Phase1"
       "project1 project1"
       "homework1 homework2"
-      "homework3 homework4"
-      "homework5 homework6";
+      "Phase2 Phase2"
+      "project2 project2"
+      "homework3 homework4";
     padding-bottom: 1em;
   }
 
   .project1 img {
-    width: 100%;
-    height: 280px;
+    /* width: 100%; */
+    max-height: 280px;
 
+  }
+
+  .container2 .card {
+    width: 100% !important;
+    margin: 0 auto;
   }
 }
 
@@ -293,7 +362,7 @@ i {
     font-size: 14px;
   }
 
-  .container3 {
+  .container4 {
     padding: 0.25em;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas:
